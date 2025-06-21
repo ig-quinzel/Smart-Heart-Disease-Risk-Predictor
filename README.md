@@ -1,17 +1,12 @@
 # 🫀 Smart Heart Disease Risk Predictor using Naive Bayes
 
-This is a Flask web application that predicts a person’s likelihood of having heart disease based on user input. It uses a **Naive Bayes** machine learning model trained on real medical data and presents results in a clear, user-friendly way. Users can also download a personalized PDF report.
 
----
+This is a Flask web application that predicts a person’s likelihood of having heart disease based on their medical details. It uses a Decision Tree machine learning model trained on real-world heart disease data and offers predictions in a clean, intuitive interface. Users can also download a personalized PDF report containing their input and prediction.
 
-## 💡 Features
-
-- 🔹 Personal and Medical info input across two steps
-- 🔹 Naive Bayes classification for prediction
-- 🔹 Clean and animated dark-themed UI
-- 🔹 Displays full summary of inputs and result
-- 🔹 PDF report download support
-
----
-
-
+💡 Features
+🔹 Step-by-step input: Personal info ➜ Medical details
+🔹 Heart disease risk prediction using Decision Tree
+🔹 Dark-themed UI with animation
+🔹 Displays full summary of all user inputs
+🔹 Downloadable PDF report with the prediction result
+🔹 Confusion matrix plotted and saved during training
