@@ -1,0 +1,132 @@
+/* Reset default */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Dark mode body */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #121212;
+  color: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Container card */
+.container {
+  width: 100%;
+  max-width: 550px;
+  padding: 30px;
+  background: #1f1f1f;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  animation: fadeInUp 0.6s ease-out;
+  transition: all 0.3s ease;
+}
+
+/* Heading styles */
+h2, h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #00d9ff;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="submit"],
+button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background-color: #2c2c2c;
+  color: #fff;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+/* On focus */
+input:focus {
+  border-color: #00d9ff;
+  outline: none;
+}
+
+/* Submit button */
+input[type="submit"],
+button {
+  background: #00d9ff;
+  border: none;
+  color: #121212;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover,
+button:hover {
+  background: #00b4cc;
+}
+
+/* Result box */
+.result {
+  margin-top: 20px;
+  padding: 15px;
+  background: #1db954;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+  animation: fadeIn 0.7s ease-in;
+}
+
+/* Medical list */
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+ul li {
+  background: #2e2e2e;
+  padding: 10px;
+  margin: 5px 0;
+  border-left: 4px solid #00d9ff;
+  border-radius: 6px;
+  animation: slideIn 0.5s ease;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

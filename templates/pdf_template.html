@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { font-family: Arial, sans-serif; font-size: 14px; }
+    h2 { color: #444; }
+    ul { padding: 0; list-style-type: none; }
+    li { margin-bottom: 5px; }
+  </style>
+</head>
+<body>
+  <h2>Heart Disease Risk Prediction Report</h2>
+  <p><strong>Name:</strong> {{ name }}</p>
+  <p><strong>Email:</strong> {{ email }}</p>
+  <p><strong>Age:</strong> {{ age }}</p>
+  <p><strong>Gender:</strong> {{ gender }}</p>
+
+  <h3>Medical Information</h3>
+  <ul>
+    {% for key, value in features.items() %}
+      <li><strong>{{ key|capitalize }}:</strong> {{ value }}</li>
+    {% endfor %}
+  </ul>
+
+  <h3>Prediction:</h3>
+  <p><strong>{{ result }}</strong></p>
+</body>
+</html>

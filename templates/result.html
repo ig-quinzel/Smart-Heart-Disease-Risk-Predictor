@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>Prediction Result</h2>
+
+    <p><strong>Name:</strong> {{ name }}</p>
+    <p><strong>Email:</strong> {{ email }}</p>
+    <p><strong>Age:</strong> {{ age }}</p>
+    <p><strong>Gender:</strong> {{ gender }}</p>
+
+    <h3>Medical Inputs</h3>
+    <ul>
+      <li>Chest Pain Type: {{ features['cp'] }}</li>
+      <li>Resting Blood Pressure: {{ features['trestbps'] }}</li>
+      <li>Cholesterol: {{ features['chol'] }}</li>
+      <li>Fasting Blood Sugar: {{ features['fbs'] }}</li>
+      <li>Rest ECG: {{ features['restecg'] }}</li>
+      <li>Max Heart Rate Achieved: {{ features['thalach'] }}</li>
+      <li>Exercise Induced Angina: {{ features['exang'] }}</li>
+      <li>Oldpeak: {{ features['oldpeak'] }}</li>
+      <li>Slope: {{ features['slope'] }}</li>
+      <li>Number of Major Vessels: {{ features['ca'] }}</li>
+      <li>Thalassemia Type: {{ features['thal'] }}</li>
+    </ul>
+
+    <div class="result">{{ result }}</div>
+
+    <br>
+    <!-- PDF Download Button -->
+    <form method="POST" action="/download">
+      <input type="hidden" name="name" value="{{ name }}">
+      <input type="hidden" name="email" value="{{ email }}">
+      <input type="hidden" name="age" value="{{ age }}">
+      <input type="hidden" name="gender" value="{{ gender }}">
+      {% for key, value in features.items() %}
+        <input type="hidden" name="{{ key }}" value="{{ value }}">
+      {% endfor %}
+      <input type="hidden" name="result" value="{{ result }}">
+      <button type="submit">📄 Download Report as PDF</button>
+    </form>
+  </div>
+</body>
+</html>
